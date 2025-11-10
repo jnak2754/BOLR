@@ -29,8 +29,10 @@ The study compares four modeling strategies—synthetic-only, empirical-only, se
    python scripts/Synthetic_Data_Generator.py
 
 3. **Explore baseline empirical and synthetic models:**
+   ```bash
    source("scripts/Empirical_OLRmodel.R")
 
 4. **Run full analysis, generate figures and metrics:**
+   ```bash
    source("scripts/OLRandFigures.R")
 
