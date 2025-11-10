@@ -19,4 +19,12 @@ The study compares four modeling strategies—synthetic-only, empirical-only, se
 - `outputs/`: Auto-generated figures and model summaries.
 
 
+## How to Reproduce the Analysis
+
+1. **Ensure all required data is available:**
+   - Place `WiSPD.csv` and `Fragility_DB.csv` in the `data/` folder.
+
+2. **Generate standardized datasets:**
+   ```bash
+   python scripts/Synthetic_Data_Generator.py
 
