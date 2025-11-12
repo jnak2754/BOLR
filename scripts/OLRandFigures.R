@@ -50,8 +50,12 @@ cat_cols <- c('number_of_stories', 'roof_shape', 'RWC', 'garage', 'terrain', 'ro
 cont_cols <- c('wind_speed_sample') 
 
 # Define the hierarchical model formula
+# Define the hierarchical model formula
 hierarchical_formula <- bf(
-  damage_state_encoded ~ (wind_speed_sample + terrain + roof_shape + number_of_stories + RWC + garage + roof_cover + RDA + storm_type) * group
+  damage_state_encoded ~ 1 + wind_speed_sample + terrain + roof_shape +
+    number_of_stories + RWC + garage + roof_cover + RDA + storm_type +
+    (1 + wind_speed_sample + terrain + roof_shape +
+       number_of_stories + RWC + garage + roof_cover + RDA + storm_type | group)
 )
 
 # Define all possible class labels 
