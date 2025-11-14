@@ -54,8 +54,7 @@ cont_cols <- c('wind_speed_sample')
 hierarchical_formula <- bf(
   damage_state_encoded ~ 1 + wind_speed_sample + terrain + roof_shape +
     number_of_stories + RWC + garage + roof_cover + RDA + storm_type +
-    (1 + wind_speed_sample + terrain + roof_shape +
-       number_of_stories + RWC + garage + roof_cover + RDA + storm_type | group)
+    (1 | group)
 )
 
 # Define all possible class labels 
